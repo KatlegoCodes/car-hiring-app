@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
 export const BookingForm = ({ carId }: { carId: string }) => {
@@ -125,3 +125,5 @@ export const BookingForm = ({ carId }: { carId: string }) => {
     </form>
   );
 };
+
+export default BookingForm;

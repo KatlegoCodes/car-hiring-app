@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import BookingForm from "@/components/BookingForm";
 
 const CarDetailsPage = async ({
   params,
@@ -68,9 +69,7 @@ const CarDetailsPage = async ({
           <p className="text-gray-700 mt-6 leading-relaxed ">
             {car.description}
           </p>
-          <button className="mt-8 w-full sm:w-auto bg-blue-900 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-            Book Now
-          </button>
+          <BookingForm carId={car.id} />
         </div>
       </div>
     </main>
