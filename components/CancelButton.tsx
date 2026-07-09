@@ -1,10 +1,9 @@
 "use client";
 
-import { PATCH } from "@/app/api/bookings/[id]/route";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-const CancelButton = async ({ bookingId }: { bookingId: string }) => {
+const CancelButton = ({ bookingId }: { bookingId: string }) => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -20,7 +19,7 @@ const CancelButton = async ({ bookingId }: { bookingId: string }) => {
     setLoading(false);
 
     if (res.ok) {
-      router.reload();
+      router.refresh();
     } else {
       const data = await res.json();
       alert(data.error || "Something went wrong");
