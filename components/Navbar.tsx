@@ -14,6 +14,12 @@ const Navbar = () => {
       </Link>
 
       <div className="flex items-center gap-4 text-sm font-medium">
+        <Link
+          href="/recommendations"
+          className="text-gray-600 hover:text-gray-900"
+        >
+          AI Picks
+        </Link>
         {session ? (
           <>
             <Link
