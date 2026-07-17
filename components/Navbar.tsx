@@ -8,28 +8,34 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   return (
-    <nav className="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-      <Link href="/" className="text-xl font-bold text-blue-600">
-        DriveEasy
-      </Link>
+    <nav className="bg-white border-b border-gray-100 px-6 py-4 sticky top-0 z-50 ">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-xl font-extrabold text-blue-600 tracking-tight"
+        >
+          DriveEasy
+        </Link>
+      </div>
 
-      <div className="flex items-center gap-4 text-sm font-medium">
+      <div className="flex items-center gap-6 text-sm font-medium">
         <Link
           href="/recommendations"
-          className="text-gray-600 hover:text-gray-900"
+          className="text-gray-500 hover:text-blue-600 transition-colors"
         >
           AI Picks
         </Link>
+
         {session ? (
           <>
             <Link
               href="/dashboard"
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-500 hover:text-blue-600 transition-colors"
             >
-              Bookings
+              My Bookings
             </Link>
             <button
-              className="text-gray-600 hover:text-gray-900"
+              className="text-gray-500 hover:text-red-500 transition-colors"
               onClick={() => signOut({ callbackUrl: "/" })}
             >
               Sign Out
@@ -37,7 +43,10 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <Link href="/login" className="text-gray-600 hover:text-gray-900">
+            <Link
+              href="/login"
+              className="text-gray-500 hover:text-red-500 transition-colors"
+            >
               Log In
             </Link>
             <Link
