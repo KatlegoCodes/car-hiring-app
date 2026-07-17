@@ -44,7 +44,7 @@ const CarDetailsPage = async ({
         </Link>
 
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
-          <div>
+          <div className="relative w-full h-80">
             <Image
               src={car.imageUrl}
               alt={`${car.brand} ${car.name}`}
