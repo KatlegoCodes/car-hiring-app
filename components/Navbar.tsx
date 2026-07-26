@@ -18,7 +18,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="flex items-center gap-6 text-sm font-medium">
+      <div className="flex items-center justify-end gap-6 text-sm font-medium">
         <Link
           href="/recommendations"
           className="text-gray-500 hover:text-blue-600 transition-colors"

@@ -20,7 +20,7 @@ const cars = [
     fuelType: "petrol",
     pricePerDay: 45.0,
     imageUrl:
-      "https://images.unsplash.com/photo-1623869675184-66c12d747bc1?w=800",
+      "https://images.unsplash.com/photo-1638618164682-12b986ec2a75?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     location: "Pretoria",
     description:
       "Reliable, fuel-efficient sedan perfect for city driving and commutes.",
