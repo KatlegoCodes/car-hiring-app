@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import BookingForm from "@/components/BookingForm";
 import Link from "next/link";
+import { CarModal } from "@/components/CarModal";
 
 const CarDetailsPage = async ({
   params,
@@ -45,12 +46,7 @@ const CarDetailsPage = async ({
 
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
           <div className="relative w-full h-80">
-            <Image
-              src={car.imageUrl}
-              alt={`${car.brand} ${car.name}`}
-              fill
-              className="object-cover"
-            />
+            <CarModal imageUrl={car.imageUrl} name={car.name} />
             <span className="absolute top-4 left-4 bg-white text=gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow">
               {car.type}
             </span>
