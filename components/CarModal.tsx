@@ -30,13 +30,13 @@ export function CarModal({ imageUrl, name }: CarModalProps) {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="relative w-full max-w-5xl h-fit"
+            className="relative w-full max-w-5xl h-dvh"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-gray-300 transition cursor-pointer"
+              className="absolute -top-12 right-50 text-white text-3xl font-bold hover:text-gray-300 transition cursor-pointer"
             >
               ✕
             </button>
